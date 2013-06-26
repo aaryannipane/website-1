@@ -1,0 +1,32 @@
+-#= debug flash
+
+- unless flash.empty?
+  .container.flashes
+    .row-fluid
+
+      - flash.each do |name, msg|
+        - next unless msg.is_a?(String)
+
+        - if name == :notice
+          .alert.alert-success.fade-out.contentblock
+            %a{:class=>"close", 'data-dismiss' => "alert", :href=>"#"}
+              %i.icon-remove-circle
+            =msg
+
+        - elsif name == :error || name == :alert
+          .alert.alert-error.fade-out.contentblock
+            %a{:class=>"close", 'data-dismiss' => "alert", :href=>"#"}
+              %i.icon-remove-circle
+            =msg
+
+        - elsif name == :warning
+          .alert
+            %a{:class=>"close", 'data-dismiss' => "alert", :href=>"#"}
+              %i.icon-remove-circle.contentblock
+            =raw msg
+
+        - else
+          .alert.alert-info.fade-out.contentblock
+            %a{:class=>"close", 'data-dismiss' => "alert", :href=>"#"}
+              %i.icon-remove-circle
+            =msg

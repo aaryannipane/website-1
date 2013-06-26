@@ -1,0 +1,76 @@
+
+// Apple colors
+// #979797
+// #666666
+// #eeeeee
+// #000000
+// #0088cc
+
+// $bg-color: #CABCA8;
+// $color: #727F89 ;
+// $container-color: #D9CAB6;
+// $panel-bg-color: #D9CAB6;
+// $panel-color:;
+// $border-color: ;
+// $link-color:#7E8B95;
+
+@mixin test-pattern
+{
+  // $bg-color: #CABCA8;
+  // $color: #727F89 ;
+  // $container-color: #D9CAB6;
+  // $panel-bg-color: #D9CAB6;
+  // $panel-color: darken(#C6B093, 30%);
+  // $border-color: $panel-color;
+  // $link-color:#7E8B95;
+
+  // body
+  // {
+  //   background-color: $bg-color;
+  //   color: $color;
+  // }
+  // .panel
+  // {
+  //   border-color: $border-color;
+  //   background-color: $panel-bg-color;
+  //   p{ color: $panel-color; }
+  // }
+}
+
+
+@mixin blue-pattern{
+  $lightest-blue: #03406A;
+  $light-blue : #3E94D1;
+  $dark-blue : #03406A;
+  $blue-gray : #24577B;
+  $pop-blue : #0A64A4;
+
+  background-color: $lightest-blue;
+  .panel{
+    border-color: $dark-blue;
+    background-color: lighten($dark-blue, 30%);
+    color: $lightest-blue;
+  }
+}
+
+@mixin red-paper{
+  background-color: $color-paper-red;
+  color: $color-paper-white;
+  .panel {
+    background-color: lighten( $color-paper-blue, 30%);
+    border-color: $color-paper-blue;
+  }
+}
+
+@mixin gray-paper{
+  background-color: $color-paper-gray;
+  color: $color-paper-white;
+}
+
+@mixin light-blue-paper{
+  background-color: $color-ligh-blue;
+  // color:
+  .panel{
+
+  }
+}

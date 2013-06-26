@@ -1,0 +1,30 @@
+meta charset="utf-8"
+
+/ Uncomment to make IE8 render like IE7
+/ meta http-equiv="X-UA-Compatible" content="IE=7"
+
+/ Set the viewport width to device width for mobile
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+= stylesheet_link_tag "application"
+= javascript_include_tag "vendor/custom.modernizr"
+= csrf_meta_tag
+
+link href="images/favicon.ico" rel="shortcut icon"
+link href="images/apple-touch-icon.png" rel="apple-touch-icon"
+link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"
+link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"
+
+title= yield_meta_title
+link rel="shortcut icon" href= asset_path('favicon.ico')
+meta name= "keywords"content= yield_meta_keywords
+meta name= "description"content= yield_meta_description
+meta property= "ogtitle"content= yield_meta_title
+meta property= "ogdescription"content= yield_meta_description
+- if !yield_meta_og_image.empty?
+  meta property= "ogimage"content= yield_meta_og_image
+
+meta property= "ogsite_name"content= yield_meta_site_name
+meta property= "ogtype"content= "website"
+
+= render 'shared/analytics'
